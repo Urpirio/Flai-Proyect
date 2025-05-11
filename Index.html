@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style/Section-1-Video.css">
     <link rel="stylesheet" href="style/Section-2-img.css">
     <link rel="stylesheet" href="style/Section-3-Clientes.css">
+    <link rel="stylesheet" href="style/Section-4-Cards.css">
+    <link rel="stylesheet" href="style/Section-5-Video.css">
+    <script src="func/section_5_BtnPlay.js"></script>
     <title>Flai</title>
 </head>
 <body>
@@ -123,7 +126,7 @@
             <div class="Div-Container-Cards">
                 <div class="Div1-Cards">
                     
-                    <article>
+                    <article >
                         <header>
                             <img src="https://cdn.pixabay.com/photo/2013/11/20/11/39/dog-213784_1280.jpg" alt="">
                         </header>
@@ -179,30 +182,39 @@
         </section>
 
         <!-- Seccion 5 -->
-        <section>
-            <div>
-                <h1></h1>
-                <span></span>
+        <section class="Section-5-Video">
+            <div class="Div1-header">
+                <h1>Como funciona</h1>
+                <span>Flai</span>
             </div>
-            <div>
-                <video src=""></video>
+            <div class="Div2-Video">
+                <video id="Video-Section5" src="KYLE - iSpy feat. Lil Yachty [Official Music Video].mp4" ></video>
+                <div>
+                    <button id="btnPlay-Section5" onclick="Play_And_Pause({
+                        Id_IconBtn: 'IconBtn-Section5', 
+                        Id_video: 'Video-Section5',
+                        Id_Btn: 'btnPlay-Section5'
+                        })">
+                        <i class='bx bx-play' id="IconBtn-Section5" ></i>
+                    </button>
+                </div>
             </div>
-            <div>
+            <div class="Div3-Content">
                 <article>
-                    <h3></h3>
-                    <span></span>
+                    <h3>+100</h3>
+                    <span>ABC</span>
                 </article>
                 <article>
-                    <h3></h3>
-                    <span></span>
+                    <h3>+100</h3>
+                    <span>ABC</span>
                 </article>
                 <article>
-                    <h3></h3>
-                    <span></span>
+                    <h3>+100</h3>
+                    <span>ABC</span>
                 </article>
                 <article>
-                    <h3></h3>
-                    <span></span>
+                    <h3>+100</h3>
+                    <span>ABC</span>
                 </article>
             </div>
         </section>

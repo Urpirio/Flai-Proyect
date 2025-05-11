@@ -1,15 +1,74 @@
 .Section-4-Cards{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Section-4-Cards > .Div-Header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+
+.Section-4-Cards > .Div-Container-Cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
     
 }
-.Section-4-Cards > .Div-Header{
 
-}
-.Section-4-Cards > .Div-Container-Cards{
 
-}
 .Section-4-Cards > .Div-Container-Cards > .Div1-Cards{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.Section-4-Cards > .Div-Container-Cards > .Div1-Cards > article{
+    width: 45%;
+    border: 1px solid black;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div1-Cards > article > header{
+    padding: 5px;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div1-Cards > article > header > img{
+   width: 100%;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div1-Cards > article > main{
+    padding: 5px;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div1-Cards > article > footer{
+    padding: 5px;
+}
+
+
+
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards > article{
+    border: 1px solid black;
+    width: 45%;
 
 }
-.Section-4-Cards > .Div-Container-Cards > .Div2-Cards{
-
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards > article > header{
+    padding: 5px;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards > article > header > img{
+   width: 100%;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards > article > main{
+    padding: 5px;
+}
+.Section-4-Cards > .Div-Container-Cards > .Div2-Cards > article > footer{
+    padding: 5px;
 }

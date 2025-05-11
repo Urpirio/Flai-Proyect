@@ -1,15 +1,17 @@
 .Section-3-Problemas-Clientes{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    /* border: 1px solid black; */
 }
 .Section-3-Problemas-Clientes > .Div1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 100%;
+    padding: 10px;
     width: 40%;
     border: 1px solid black;
 }
