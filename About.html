@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/style de about/header.css">
     <link rel="stylesheet" href="/style de about/seccion-1-.css">
     <link rel="stylesheet" href="/style de about/seccion-2-.css">
     <link rel="stylesheet" href="/style de about/seccion-3-.css">
+    <link rel="stylesheet" href="/style de about/seccion-4-.css">
+    <link rel="stylesheet" href="/style de about/seccion-5-.css">
+    <link rel="stylesheet" href="/style de about/seccion-6-.css">
+    <link rel="stylesheet" href="/style de about/seccion-7-.css">
+    <link rel="stylesheet" href="/style de about/seccion-8-.css">
+    <link rel="stylesheet" href="/style de about/seccion-9-.css">
+    <link rel="stylesheet" href="/style de about/seccion-10-.css">
+    <link rel="stylesheet" href="/style/Section-5-Video.css">
+     <script src="func/section_5_BtnPlay.js"></script>
     <title>Document</title>
     
 </head>
 <body>
       <header  class="header d-flex justify-space-around gap-20">
         <section>
-            <img class="w-25" src="/imagen/Flai-Logo.png" alt="">
+            <img class="w-50" src="/imagen/Flai-Logo.png" alt="">
         </section>
         <nav>
            <a href="">Descubre Flai</a>
@@ -22,13 +32,13 @@
            <a href="">Flai para Trasportistas</a>
            <a href="">Contacto</a>
         </nav>
-        <section>
-            <button>
-                <i></i>
+        <section class="ss">
+            <button class="btn-seccion1">
+                <i class="'bx bx-user'"></i>
                 <span> Acceder</span>
             </button>
            
-            <button>
+            <button class="btn-seccion2" >
                Afiliate
             </button>
         </section>
@@ -38,13 +48,15 @@
 <main>
     <!-- secttion 1 -->
 
-    <section class=" d-flex justify-content-center m-50 ">
+    <section class="Section-1-Video d-flex justify-content-center m-50 ">
     <!-- esta seccion estara en columna -->
       <div class="Div1" >
-               <video src="imagen/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4" controls aria-describedby="video-description">
-                   <track src="subtitles/transporting_asphalt.vtt" kind="subtitles" srclang="en" label="English">
-                   <p id="video-description">This video shows the process of transporting asphalt using a semi-trailer.</p>
-               </video>
+          <video autoplay muted loop class="video-seccion-1">
+            <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+            <track src="description.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+            <source src="imagen/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
+
+          </video>
             </div>
 
             <article class="hero z-indez d-flex flex-column justify-content-center">
@@ -133,108 +145,137 @@
 
      <!-- seccion 4 -->
 
- <section>
-
-    <div class="">
+ <section class="seccion-galeria">
   <!-- Fila 1 -->
-  <div class=""> <img src="" alt=""></div>
-  <div class=""><img src="" alt=""></div>
-  <div class=""><img src="" alt=""></div>
+  <div class="d-flex justify-content-center gap-2 mb-2">
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+  </div>
 
   <!-- Fila 2 -->
-  <div class=""><img src="" alt=""></div>
-  <div class=""><img src="" alt=""></div>
+  <div class="d-flex justify-content-center gap-2 mb-2">
+    <div class="card-custom large-square"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+    <div class="card-custom large-rect"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+  </div>
 
   <!-- Fila 3 -->
-  <div class=""><img src="" alt=""></div>
-  <div class=""><img src="" alt=""></div>
-  <div class=""><img src="" alt=""></div>
-</div>
+  <div class="d-flex justify-content-center gap-2">
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+    <div class="card-custom small"><img src="imagen/tipos-de-equipos-de-trabajo-1024x612.jpg" alt=""></div>
+  </div>
+</section>
 
- </section> 
           
        <!-- seccion 5 -->
-   <section>
-        <h1>Video Institucional</h1>
-
-        <video src="">video</video>
-
-        <span>+100 ABC</span>
-        <span>+100 ABC</span>
-        <span>+100 ABC</span>
-        <span>+100 ABC</span>
-
-   </section>
+   
+        
+          <section class="Section-5-Video video-5">
+            <div class="Div1-header">
+                <h1 class="h1-seccion-5">video institucional</h1>
+            </div>
+            <div class="Div2-Video">
+                <video id="Video-Section5" class="video-seccion-5" src="imagen/537828_Grass Railing Car Road_By_Videophilia_Artlist_HD.mp4" ></video>
+                <div>
+                    <button id="btnPlay-Section5" onclick="Play_And_Pause({
+                        Id_IconBtn: 'IconBtn-Section5', 
+                        Id_video: 'Video-Section5',
+                        Id_Btn: 'btnPlay-Section5'
+                        })">
+                        <i class='bx bx-play' id="IconBtn-Section5" ></i>
+                    </button>
+                </div>
+            </div>
+            <div class="Div3-Content">
+                <article>
+                    <h3>+100</h3>
+                    <span>ABC</span>
+                </article>
+                <article>
+                    <h3>+100</h3>
+                    <span>ABC</span>
+                </article>
+                <article>
+                    <h3>+100</h3>
+                    <span>ABC</span>
+                </article>
+                <article>
+                    <h3>+100</h3>
+                    <span>ABC</span>
+                </article>
+            </div>
+        </section>
 
    <!-- section 6 -->
-   <section>
-       <article>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+   <section class="logos d-flex justify-content-center flex-column">
+       <article class="gap d-flex">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
 
        </article>
 
-       <article>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+       <article class="gap d-flex">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
+            <img class="w" src="imagen/Flai-Logo.png" alt="">
        </article>
            
    </section>
 
 
            <!-- section 7 -->
-         <section style="display: flex;"> 
+         <section class="seccion-7 d-flex justify-content-center text-center"> 
             <!-- fila 1 texto -->
-                 <article>
-                    <h1>Que sigue para Flai?</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat atque
+                 <article class="articulo-seccion-7 ">
+                    <h1 class="h1-seccion">Que sigue para Flai?</h1>
+                    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat atque
                          accusantium illo, cumque reprehenderit fugit distinctio
                          quos nobis aperiam officia quia qui amet vel corporis provident
                           quibusdam voluptate ut modi.</p>
 
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
+                          <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
                             inventore quas? Possimus inventore dignissimos fugiat quas quae earum? 
                             Praesentium rerum, eaque atque est assumenda tempore ullam sed suscipit esse accusantium?</p>
-                            <button>CTA</button>
+                            <button class="button-seccion-7">CTA</button>
                  </article>
 
 
                  <!-- fila 2 pasos -->
-                 <article>
+                 <article class="article-padre w-50 d-flex flex-column">
 
                          <!--  toda el articulo padre llevara un flex -->
 
                            <!-- hay 3 tarjetas aqui y estan emnumeradas por  divs -->
-                    <section class="tarj1">
-                    <div>1</div>
-                    <div>
-                        <h1>loren ispuns dolor sit amet. consectour</h1>
+                    <section class="tarj1 d-flex justify-content-center text-center">
+                    <div class="bola">1</div>
+                    <div class="card">
+                        <h1 class="h1-seccion-7">loren ispuns dolor sit amet. consectour</h1>
                         <p>Lorem ipsum dolor sit amet landitiis saepe 
                             non. Ab dolorem maxime non omnis?</p>
                     </div>
                     </section>
   
 
-              <section class="tarj2">
-                    <div>2</div>
-                    <div>
-                        <h1>loren ispuns dolor sit amet. consectour</h1>
+              <section class="tarj2 d-flex  justify-content-center text-center">
+                    <div class="bola">2</div>
+                    <div class="card">
+                        <h1 class="h1-seccion-7">loren ispuns dolor sit amet. consectour</h1>
                         <p>Lorem ipsum dolor sit amet landitiis saepe 
                             non. Ab dolorem maxime non omnis?</p>
                     </div>
                     </section>
 
                     
-                     <section class="tarj3">
-                    <div>3</div>
-                    <div>
-                        <h1>loren ispuns dolor sit amet. consectour</h1>
+                     <section class="tarj3 d-flex justify-content-center text-center">
+                    <div class="bola">3</div>
+                    <div class="card">
+                        <h1 class="h1-seccion-7">loren ispuns dolor sit amet. consectour</h1>
                         <p>Lorem ipsum dolor sit amet landitiis saepe 
                             non. Ab dolorem maxime non omnis?</p>
                     </div>
@@ -244,22 +285,25 @@
 
      <!-- seccion 8 -->
 
-   <section>
-         <div>
+   <section class="seccion-8 d-flex ">
+        
+          <div class="div1-seccion-8">
             <h1>trabaja con nosotros</h1>
             <p>envia tu empleos@flai.com.do</p>
-         </div>
+            </div>
+ 
+            <div>
+            <button class="btn-seccion-8">Ver Linkendln</button>
+          </div>
+        
 
-         <div>
-            <button>Ver Linkendln</button>
-         </div>
    </section>
     
 
    <!-- seccion 9 -->
         <!-- esta seccion estara en formato columna  -->
-    <section style="display: flex; justify-content: center; flex-direction: column;">
-        <div>
+    <section class="fug d-flex flex-column">
+        <div class="text-center">
             <h1>FAQ</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing 
                 elit. Impedit, dolorem jflkd flksfg porro ipsam.</p>
@@ -267,74 +311,78 @@
           
          <!-- contenedor padre  de ambas secciones  y estara en formato flex fila -->
          
-        <section style="display: flex; ">
+        <section class="contenedor" style="display: flex; ">
    
                 <!-- fila 1  -->
-                <article>
-              <div> 
-                <div>
+                <article class="fila1" >
+
+
+              <div class="s d-flex"> 
+                <div class="bola2">
                     <i>1</i>
                 </div>
-                <div>
-                    <h1>lorem tittulo </h1>
+                <div class="s  d-flex flex-column">
+                    <h1 class="h1-seccion-9">lorem tittulo </h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla maiores aspernatur nisi aperiam voluptas dicta, natus incidunt. Repellat quis eius ut quisquam inventore? Ipsa harum blanditiis assumenda recusandae porro!
                 </div>
               </div>
 
-               <div> 
-                <div>
+               <div class="s d-flex"> 
+                <div class="bola2">
                     <i>2</i>
                 </div>
                 <div>
-                    <h1>lorem titulo</h1>
+                    <h1 class="h1-seccion-9">lorem titulo</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla maiores aspernatur nisi aperiam voluptas dicta, natus incidunt. Repellat quis eius ut quisquam inventore? Ipsa harum blanditiis assumenda recusandae porro!
                 </div>
               </div>
 
 
 
-                <div> 
-                <div>
+                <div class=" s d-flex"> 
+
+                <div class="bola2">
                     <i>3</i>
                 </div>
                 <div>
-                    <h1>lorem titulo</h1>
+                    <h1 class="h1-seccion-9">lorem titulo</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla maiores aspernatur nisi aperiam voluptas dicta, natus incidunt. Repellat quis eius ut quisquam inventore? Ipsa harum blanditiis assumenda recusandae porro!
                 </div>
               </div>
+
               </article>
      
 
                    <!-- fila 2 -->
-                <article>
-              <div> 
-                <div>
+                <article class="fila2">
+              <div class="s d-flex"> 
+                <div class="bola2">
                     <i>1</i>
                 </div>
                 <div>
-                    <h1>lorem tittulo </h1>
+                    <h1 class="h1-seccion-9">lorem tittulo </h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla maiores aspernatur nisi aperiam voluptas dicta, natus incidunt. Repellat quis eius ut quisquam inventore? Ipsa harum blanditiis assumenda recusandae porro!
                 </div>
               </div>
 
-               <div> 
-                <div>
+               <div class="s d-flex"> 
+                <div class="bola2">
                     <i>2</i>
                 </div>
                 <div>
-                    <h1>lorem titulo</h1>
+                    <h1 class="h1-seccion-9">lorem titulo</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla maiores aspernatur nisi aperiam voluptas dicta, natus incidunt. Repellat quis eius ut quisquam inventore? Ipsa harum blanditiis assumenda recusandae porro!
                 </div>
               </div>
 
 
 
-                <div> 
-                <div>
+                <div class="s d-flex"> 
+                <div class="bola2">
                     <i>3</i>
                 </div>
                 <div>
-                    <h1>lorem titulo</h1>
+                    <h1 class="h1-seccion-9">lorem titulo</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                      elit. Itaque nulla maiores aspernatur nisi 
                     aperiam voluptas dicta, natus incidunt.
@@ -348,6 +396,16 @@
 
     </section>
 
+<section class="seccion-10 d-flex flex-column justify-content-center">
+       <div class="contenedor-span d-flex flex-column">}}}}}}}}}}}}}}}}}}}}}}}}
+        <span class="span-seccion-10-1">loren ipsum</span>
+        <span class="span-seccion-10-2">dolor sit amet</span>
+       </div>
+      <div class="btn-seccion-10">
+        <button class="btn-seccion-10-1">CTA</button>
+        <button class="btn-seccion-10-2">Descubre Flai</button>
+      </div>
+</section>
 
 </main>
 </body>
