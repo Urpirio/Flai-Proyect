@@ -1,0 +1,162 @@
+.Section-7-PruebaSocial{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+    gap: 20px;
+}
+
+.Section-7-PruebaSocial > .Div-Title{
+    display: flex;
+    justify-content: center;
+}
+
+.Section-7-PruebaSocial > .Main-Comments{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/* Parte 1 */
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article{
+    display: flex;
+    flex-direction: column;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .First-Part{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .First-Part > .Div1{
+    display: flex;
+
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .First-Part > .Div1 > img{
+   height: 100px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .First-Part > .Div2{
+    
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .Second-Part{
+    display: flex;
+    height: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-1 > article > .Second-Part > span{
+    position: absolute;
+    background: white;
+    padding: 5px;
+}
+
+
+
+/* Parte 2 */
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article{
+    display: flex;
+    flex-direction: column;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .First-Part{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .First-Part > .Div1{
+    display: flex;
+
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .First-Part > .Div1 > img{
+   height: 100px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .First-Part > .Div2{
+    
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .Second-Part{
+    display: flex;
+    height: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-2 > article > .Second-Part > span{
+    position: absolute;
+    background: white;
+    padding: 5px;
+}
+
+
+
+/* Parte 3 */
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article{
+    display: flex;
+    flex-direction: column;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .First-Part{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .First-Part > .Div1{
+    display: flex;
+
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .First-Part > .Div1 > img{
+   height: 100px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .First-Part > .Div2{
+    
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .Second-Part{
+    display: flex;
+    height: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.Section-7-PruebaSocial > .Main-Comments > .Part-Card-3 > article > .Second-Part > span{
+    position: absolute;
+    background: white;
+    padding: 5px;
+}
