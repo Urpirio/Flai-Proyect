@@ -1,0 +1,39 @@
+.fila2,.fila1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h1-seccion-9{
+    font-size: medium;
+    font-weight: bold;
+}
+.s{
+    display: flex;
+    gap: 20px;
+}
+.bola{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.bola2 i{
+    border: 2px solid gray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fug{
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
