@@ -1,0 +1,111 @@
+.Section-1-Video{
+    padding-top: 0px;
+    width:100%;
+    height: 100vh;
+}
+.Section-1-Video > .Div1 {
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+}
+.Section-1-Video > .Div1 > video{
+    object-fit: cover;
+    width: 100%;
+    height: 120%;
+       position: relative;
+    top: -10rem;
+    margin-top: 2rem;
+}
+
+
+.Div2-h1{
+    color: white;
+}
+.Div2-span{
+    color: white;
+    display: flex;
+    text-align: center;
+}
+.Div2-In-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ss{
+   display: flex;
+   gap: 20px;
+}
+
+
+.Section-1-Video > .Div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    padding-top: 100px;
+    gap: 15px;
+    height: 68.7%;
+    /* border: 1px solid black; */
+}
+
+.Section-1-Video > .Div2 > .Div2-In-1{
+
+}
+
+.Section-1-Video > .Div2 > .Div2-In-2{
+    
+}
+.Section-1-Video > .Div2 > .Div2-In-2 > button{
+    padding: 10px 20px 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+
+}
+
+
+.Section-1-Video >.Div3{
+    width: 94%;
+    height: 17%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid black; */
+    position: relative;
+    padding-right: 90px;
+    z-index: 20;
+
+}
+
+.Section-1-Video > .Div3 > .Div3_In{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 30px;
+   
+    background-color: white;
+}
+.btn-seccion1{
+   background-color: transparent;
+   color: white;
+   border: 2px solid white;
+   width: 100px;
+   border-radius: 5px;
+}
+
+.btn-seccion2{
+   
+   width: 150px;
+   background-color: white;
+   border-radius: 10px;
+   border:  2px solid black;
+}

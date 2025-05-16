@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    font-family: "Inter", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+}
+
+.Header-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+
+    /* border: 1px solid black; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+}
+
+/* .Header-page > section > img{
+    height: 40px;
+} */
+
+.Header-page > nav{
+    display: flex;
+    /* flex-grow: unset;
+    flex-basis: 0; */
+    gap: 10px;
+
+}
+.Header-page > nav > span > a{
+    text-decoration: none;
+    color: white;
+}
+.Header-page > .Section-1{
+    display: flex;
+    flex-grow: unset;
+    flex-basis: 0;
+}
+.Header-page > .Section-2{
+
+    display: flex;
+    gap: 10px;
+    flex-grow: unset;
+    flex-basis: 0;
+
+}
+.Header-page > .Section-2 > .Btn1{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+.Header-page > .Section-2 > .Btn2{
+    padding: 10px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.Header-page > nav > span{
+    font-weight: 500;
+}
+
