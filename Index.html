@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/style de about/header.css">
-    <link rel="stylesheet" href="style/Section-1-Video.css">
-    <link rel="stylesheet" href="style/Section-2-img.css">
-    <link rel="stylesheet" href="style/Section-3-Clientes.css">
-    <link rel="stylesheet" href="style/Section-4-Cards.css">
-    <link rel="stylesheet" href="style/Section-5-Video.css">
-    <link rel="stylesheet" href="/style/section-6.css">
-    <link rel="stylesheet" href="style/Section-7-Comments.css">
-    <link rel="stylesheet" href="/style/Section-8-FAQ.css">
-    <link rel="stylesheet" href="/style/Section-9-BeforeFooter.css">
-    <script src="func/section_5_BtnPlay.js"></script>
-    <script type="module" src="/RenderData/Section_7.js"></script>
-    <title>Flai</title>
+    <link rel="stylesheet" href="/Style - Home/Home-Header.css">
+    <link rel="stylesheet" href="/Style - Home/Section-1-Video.css">
+    <link rel="stylesheet" href="/Style - Home/Section-2-img.css">
+    <link rel="stylesheet" href="/Style - Home/Section-3-Clientes.css">
+    <link rel="stylesheet" href="/Style - Home/Section-4-Cards.css">
+    <link rel="stylesheet" href="/Style - Home/Section-5-Video.css">
+    <link rel="stylesheet" href="/Style - Home/section-6.css">
+    <link rel="stylesheet" href="/Style - Home/Section-7-Comments.css">
+    <link rel="stylesheet" href="/Style - Home/Section-8-FAQ.css">
+    <link rel="stylesheet" href="/Style - Home/Section-9-BeforeFooter.css">
+    <script src="/func/Mutipagina/BtnPlay.js"></script>
+    <script type="module" src="/func/Renderizado Datos/HomePage/Section_7.js"></script>
+    <title>Flai - Home</title>
 </head>
 <body>
 
     <!-- Header -->
-    <header  class="header d-flex justify-space-around gap-20">
+    <header  class="Header-page">
         <section>
-            <img class="w-50" src="/imagen/Flai-Logo.png" alt="">
+            <img class="w-50" src="/Images/Flai-Logo.png" alt="">
         </section>
         <nav>
-           <a href="">Descubre Flai</a>
-           <a href="">Flai para Empresa</a>
-           <a href="">Flai para Trasportistas</a>
-           <a href="">Contacto</a>
+           <span>
+            <a href="/AboutUs">Descubre Flai</a>
+           </span>
+           <span>
+            <a href="">Flai para Empresa</a>
+           </span>
+           <span>
+            <a href="">Flai para Trasportistas</a>
+           </span>
+           <span>
+            <a href="">Contacto</a>
+           </span>
         </nav>
         <section class="">
             <button class="btn-seccion1">
@@ -54,7 +62,7 @@
                <video muted autoplay loop  class="">
                    <track src="subtitles/en.vtt" kind="subtitles" srclang="en" label="English">
                    <track src="descriptions/en-description.vtt" kind="descriptions" srclang="en" label="English Descriptions">
-                   <source src="imagen/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
+                   <source src="Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
                    Tu navegador no soporta el elemento de video.
                </video>
             </div>
@@ -192,8 +200,9 @@
                 <h1 class="h1-seccion-5">flai</h1>
             </div>
             <div class="Div2-Video">
-                <video id="Video-Section5" class="video-seccion-5" src="imagen/537828_Grass Railing Car Road_By_Videophilia_Artlist_HD.mp4" ></video>
+                <video id="Video-Section5" class="video-seccion-5" src="/Videos/KYLE - iSpy feat. Lil Yachty [Official Music Video].mp4" ></video>
                 <div>
+                    <!-- Esto es un Btn pasando un Objeto a una funcion -->
                     <button id="btnPlay-Section5" onclick="Play_And_Pause({
                         Id_IconBtn: 'IconBtn-Section5', 
                         Id_video: 'Video-Section5',
@@ -232,15 +241,19 @@
             <!-- fila 1 texto -->
                  <article class="articulo-seccion-6 ">
                     <h1 class="h1-seccion">Que sigue para Flai?</h1>
-                    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat atque
-                         accusantium illo, cumque reprehenderit fugit distinctio
-                         quos nobis aperiam officia quia qui amet vel corporis provident
-                          quibusdam voluptate ut modi.</p>
+                    <p class="p">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat atque
+                        accusantium illo, cumque reprehenderit fugit distinctio
+                        quos nobis aperiam officia quia qui amet vel corporis provident
+                        quibusdam voluptate ut modi.
+                    </p>
 
-                          <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
-                            inventore quas? Possimus inventore dignissimos fugiat quas quae earum? 
-                            Praesentium rerum, eaque atque est assumenda tempore ullam sed suscipit esse accusantium?</p>
-                            <button class="button-seccion-6">CTA</button>
+                    <p class="p">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
+                        inventore quas? Possimus inventore dignissimos fugiat quas quae earum? 
+                        Praesentium rerum, eaque atque est assumenda tempore ullam sed suscipit esse accusantium?
+                    </p>
+                    <button class="button-seccion-6">CTA</button>
                  </article>
 
 
@@ -254,8 +267,10 @@
                     <div class="bola">1</div>
                     <div class="card">
                         <h1 class="h1-seccion-6">loren ispuns dolor sit amet. consectour</h1>
-                        <p>Lorem ipsum dolor sit amet landitiis saepe 
-                            non. Ab dolorem maxime non omnis?</p>
+                        <p>
+                            Lorem ipsum dolor sit amet landitiis saepe 
+                            non. Ab dolorem maxime non omnis?
+                        </p>
                     </div>
                     </section>
   
@@ -264,8 +279,10 @@
                     <div class="bola">2</div>
                     <div class="card">
                         <h1 class="h1-seccion-6">loren ispuns dolor sit amet. consectour</h1>
-                        <p>Lorem ipsum dolor sit amet landitiis saepe 
-                            non. Ab dolorem maxime non omnis?</p>
+                        <p>
+                            Lorem ipsum dolor sit amet landitiis saepe 
+                            non. Ab dolorem maxime non omnis?
+                        </p>
                     </div>
                     </section>
 
@@ -274,8 +291,10 @@
                     <div class="bola">3</div>
                     <div class="card">
                         <h1 class="h1-seccion-6">loren ispuns dolor sit amet. consectour</h1>
-                        <p>Lorem ipsum dolor sit amet landitiis saepe 
-                            non. Ab dolorem maxime non omnis?</p>
+                        <p>
+                            Lorem ipsum dolor sit amet landitiis saepe 
+                            non. Ab dolorem maxime non omnis?
+                        </p>
                     </div>
                     </section>
                  </article>
@@ -291,7 +310,7 @@
 
                 <!-- Primer pal de cartas -->
                 <div class="Part-Card-1">
-                    
+                    <!-- Esto lo trae una funcion de js  -->
 
                 </div>
 
