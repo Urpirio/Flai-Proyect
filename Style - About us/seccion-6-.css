@@ -1,0 +1,17 @@
+.w{
+   width: 100px;
+}
+.logos{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   height: 60vh;
+   flex-direction: column;
+   padding: 50px;
+   border-bottom: 2px solid gray;
+}
+.gap{
+   display: flex;
+   gap: 120px;
+}

@@ -1,0 +1,19 @@
+.hero-seccion-3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contenedor-de-tarjetas{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+.contenedor-de-tarjetas h1{
+    font-weight: bold;
+}
+.contenedor-de-tarjetas p{
+    width: 200px;
+}
