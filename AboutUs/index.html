@@ -117,12 +117,12 @@
   grid-row: 3;
   column-gap: 10px;
   row-gap: 10px;
-  padding: 20px 20px 20px 20px;
   " class="Container-img">
   <style>
     .Container-img{
       grid-template-columns:  1fr 1fr 1fr ; 
       grid-template-rows: 300px 300px 300px;
+      padding: 20px 100px 20px 100px;
     }
     .Special-item{
       grid-row: span 2;
@@ -133,6 +133,7 @@
       .Container-img{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4,300px);
+        padding: 20px 50px 20px 50px;
       }
       .Special-item{
         grid-row: span 1;
@@ -143,6 +144,7 @@
       .Container-img{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4,200px);
+        padding: 20px 20px 20px 20px;
       }
       .Special-item{
         grid-row: span 1;
