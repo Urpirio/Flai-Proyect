@@ -5,23 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/Style - About us/header.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-1-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-2-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-3-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-4-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-6-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-7-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-8-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-9-.css">
-    <link rel="stylesheet" href="/Style - About us/seccion-10-.css">
-    <link rel="stylesheet" href="/Style - General/SeccionVideo.css">
      <script src="/func/Mutipagina/BtnPlay.js"></script>
     <title>Flai - AboutUs</title>
     
 </head>
 <body>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between  px-2 border-bottom w-100 bg-white" style="padding: 10px 10px 10px 10px;position: sticky; z-index: 10;top: 0;">
+<header class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-between  px-2 border-bottom w-100 bg-white" style="padding: 10px 10px 10px 10px;position: sticky; z-index: 10;top: 0;">
 	<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
 		<img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" style="height: 50px;">
 	</a>
@@ -33,23 +22,37 @@
 		<li><a href="#" class="nav-link px-2 link-dark">Contacto</a></li>
 	</ul>
 
-	<div class="col-md-3 text-end">
+	<div class="col-md-3 d-none d-lg-flex text-end">
 		<button type="button" class="btn btn-outline-primary me-2">Acceder</button>
 		<button type="button" class="btn btn-primary">Agenda un demo</button>
 	</div>
+  <div class="d-sm-none" >
+    <button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </button>
+  </div>
 </header>
 
-
+<!-- Todo es -->
 <main>
 
-<section class="position-relative d-flex w-100">
-  <div class="d-flex justify-content-center overflow-hidden w-100">
-    <video autoplay muted loop class="w-100 object-fit-cover">
+<section class="position-relative  d-flex overflow-hidden " >
+    <video autoplay muted loop class="  vw-100 d-lg-flex d-none" >
       <source src="/Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
     </video>
-  </div>
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center flex-column gap-3 text-center bg-opacity-50">
+  <div class="position-absolute vw-100 vh-100 border d-lg-flex d-none justify-content-center align-items-center flex-column gap-3 text-center bg-opacity-50">
     <div class="w-75">
+      <h1>Transforma la logística para que tú puedas transformar tu negocio</h1>
+      <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae magni laudantium numquam quae dolores aliquid commodi eaque, ipsum at!</p>
+    </div>
+    <div class="w-100 d-flex justify-content-center">
+      <a href="#" class="btn btn-primary rounded-pill px-4">Agenda tu demo</a>
+    </div>
+  </div>
+  <div class=" position-relative vw-100 vh-100 border d-lg-none d-flex justify-content-start  align-items-center align-items-center  flex-column gap-3 text-center bg-opacity-50">
+    <div class="w-75  pt-5 ">
       <h1>Transforma la logística para que tú puedas transformar tu negocio</h1>
       <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae magni laudantium numquam quae dolores aliquid commodi eaque, ipsum at!</p>
     </div>
@@ -59,6 +62,7 @@
   </div>
 </section>
 
+<!-- Problemas que tienen tus clientes -->
 <section class="container py-4">
   <div class="row justify-content-around align-items-center g-3">
     <div class="col-md-6">
@@ -83,9 +87,10 @@
     </div>
   </div>
 </section>
-<section>
-  <div style="text-align: center;">
-    <h1>Por que existimos?</h1>
+<!-- ¿Por qué existimos? -->
+<section class="text-center py-5">
+  <div class="container">
+    <h1>¿Por qué existimos?</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Laborum cum asperiores ipsum? Excepturi impedit, neque
@@ -93,201 +98,359 @@
     </p>
   </div>
 </section>
-<section style="display: flex; justify-content: center;gap: 20px;flex-wrap: wrap;">
-  <article style="width: 25%;min-width: 300px;display: flex;flex-direction: column;align-items: center;text-align: center;justify-content: center;">
-    <h1>Mision</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, consequuntur.</p>
-  </article>
-  <article style="width: 25%;min-width: 300px;display: flex;flex-direction: column;align-items: center;text-align: center;justify-content: center;">
-    <h1>Vision</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, blanditiis!</p>
-  </article>
-  <article style="width: 25%;min-width: 300px;display: flex;flex-direction: column;align-items: center;text-align: center;justify-content: center;">
-    <h1>Valores</h1>
-    <p>
-      Transparencia,Flexibilidad,
-      Precision,Innovacion,Escalabilidad,
-      Servicio humano
-    </p>
-  </article>
-</section>
-<section style="
-  display: grid;
-  column-gap: 10px;
-  row-gap: 10px;
-  " class="Container-img">
-  <style>
-    .Container-img{
-      grid-template-columns:  1fr 1fr 1fr ; 
-      grid-template-rows: 300px 300px 300px;
-      padding: 20px 100px 20px 100px;
-    }
-    .Special-item{
-      grid-row: span 2;
-    }
 
-    @media (max-width: 1200px) {
-        
-      .Container-img{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,300px);
-        padding: 20px 50px 20px 50px;
-      }
-      .Special-item{
-        grid-row: span 1;
-      }
-    }
-    @media (max-width: 700px) {
-        
-      .Container-img{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,200px);
-        padding: 20px 20px 20px 20px;
-      }
-      .Special-item{
-        grid-row: span 1;
-      }
-    }
-    
-    @media (max-width: 667px) {
-        
-      .Container-img{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,200px);
-      }
-      .Special-item{
-        grid-row: span 1;
-      }
-    }
-  </style>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-
-  <div style="border: 1px solid black;" class="Special-item">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div style="border: 1px solid black;">
-    <img style="object-fit: cover;height: 100%;width: 100%;" src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+<section class="py-4">
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
+        <h1>Misión</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, consequuntur.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
+        <h1>Visión</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, blanditiis!</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
+        <h1>Valores</h1>
+        <p>
+          Transparencia, Flexibilidad, Precisión, Innovación, Escalabilidad,
+          Servicio humano
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div>
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    gap: 10px;
+    padding: 20px 100px;
+  }
 
+  .image-grid > div {
+    border: 1px solid black;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .special-item {
+    grid-row: span 2;
+  }
+
+  @media (max-width: 1200px) {
+    .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 300px);
+      padding: 20px 50px;
+    }
+    .special-item {
+      grid-row: span 1;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 200px);
+      padding: 20px;
+    }
+  }
+</style>
+
+<section class="image-grid">
+  <div>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
   </div>
   <div>
-
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
   </div>
   <div>
-    <article>
-      <h2></h2>
-      <span></span>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+
+  <div class="special-item">
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+  <div>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+  <div>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+  <div>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+  <div>
+    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
+  </div>
+</section>
+
+
+
+<!-- Video Institucional -->
+<section class="w-100 d-flex flex-column align-items-center text-white py-4" style="background-color: #000; border: 1px solid black;">
+  <div class="w-100 text-center">
+    <h1>Video Institucional</h1>
+  </div>
+
+  <div class="d-flex justify-content-center py-4 w-100">
+    <video class="w-75" controls>
+      <source src="../Videos/KYLE - iSpy feat. Lil Yachty [Official Music Video].mp4" type="video/mp4">
+      No está disponible
+    </video>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-center gap-4 w-100  p-3">
+    <article class="d-flex flex-column align-items-center justify-content-center">
+      <h2>+100</h2>
+      <span>ABC</span>
     </article>
-    <article>
-      <h2></h2>
-      <span></span>
+    <article class="d-flex flex-column align-items-center justify-content-center">
+      <h2>+100</h2>
+      <span>ABC</span>
     </article>
-    <article>
-      <h2></h2>
-      <span></span>
+    <article class="d-flex flex-column align-items-center justify-content-center">
+      <h2>+100</h2>
+      <span>ABC</span>
     </article>
-    <article>
-      <h2></h2>
-      <span></span>
+    <article class="d-flex flex-column align-items-center justify-content-center">
+      <h2>+100</h2>
+      <span>ABC</span>
     </article>
   </div>
 </section>
-<section class="container-Clientes">
-  <style>
-    .Titulo-clientes{
-      grid-area: span 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .container-Clientes{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-      grid-template-rows: repeat(2,100px);
-      column-gap: 10px;
-      row-gap: 10px;
-      padding: 20px 100px 20px 100px;
-      grid-auto-rows: 100px;
-    }
 
-    @media (max-width: 900px) {
-      .container-Clientes{
-        grid-template-columns: repeat(2,1fr);
-        padding: 20px 20px 20px 20px;
-      }
-    }
-    
-    @media (max-width: 667px) {
-      .container-Clientes{
-        grid-template-columns: repeat(2,1fr);
-        padding: 20px 20px 20px 20px;
-      }
-    }
-  </style>
-  <div  class="Titulo-clientes">
+<!-- Logos aliados y clientes -->
+<section class="container py-4">
+  <div class="text-center mb-4">
     <h4>Logos aliados y clientes</h4>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;" 
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+  
+  <div class="row g-3">
+    <!-- Repite este bloque por cada imagen -->
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+    </div>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+</section>
+
+<!-- ¿Cómo Flai puede ayudarte? -->
+<section class="container py-4">
+  <div class="row justify-content-center">
+    
+    <!-- Columna izquierda -->
+    <div class="col-12 col-md-6 mb-4">
+      <h1>¿Cómo Flai puede ayudarte?</h1>
+      <div class="fs-5">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At facilis odio consequatur corrupti deleniti, perferendis quam eaque culpa voluptatum dolor nobis voluptate et quaerat maiores quis quibusdam quae quo eveniet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eos ipsam incidunt recusandae, reprehenderit pariatur minus error perspiciatis accusamus quam quidem optio magni nam et quasi sed adipisci voluptate dignissimos.</p>
+      </div>
+      <button class="btn border border-dark rounded-3 py-2 mt-3" style="width: 200px;">CTA</button>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col-12 col-md-6 ">
+      <!-- Paso 1 -->
+      <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5">
+        <div class="w-20 justify-content-center align-items-center d-flex " style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            1
+          </div>
+        </div>
+        <div class="w-70 text-center text-sm-start border p-2">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 2 -->
+       <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5">
+        <div class="w-20 justify-content-center align-items-center d-flex  " style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            2
+          </div>
+        </div>
+        <div class="w-70 text-center text-sm-start border p-2">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 3 -->
+       <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5 ">
+        <div class="w-20 justify-content-center align-items-center d-flex  " style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            3
+          </div>
+        </div>
+        <div class="w-70 text-center text-sm-start border p-2">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+    </div>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+</section>
+<!-- Trabaja con nosotros -->
+<section class="d-flex flex-wrap justify-content-center justify-content-sm-around  border p-5 gap-3 gap-sm-0" >
+  <div class="col-6 d-flex flex-column align-items-center" style="min-width: 300px;">
+   <div>
+     <h2>Trabaja con nosotros</h2>
+    <span>Envia tu CV empleos@flai.com.do</span>
+   </div>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+  <div class="col-6 d-flex justify-content-center align-items-center" style="min-width: 300px;">
+    <button style="border: 1px solid black;width: 200px;padding-top: 10px;padding-bottom: 10px;border-radius: 10px;">Ver LinkedIn</button>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+</section>
+<section>
+  <div style="text-align: center;">
+    <h1>FAQ</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores qui debitis et aperiam vel in deserunt quod mollitia dolorum corporis ipsam consectetur dicta, velit cumque neque quos aliquid quas?</p>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg" alt="">
+</section>
+<section style="display: flex;justify-content: space-around;flex-wrap: wrap;">
+  <div class="col-12 col-md-6 ">
+    <!-- Paso 1 -->
+    <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 2 -->
+       <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 3 -->
+       <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
+  <div class="col-12 col-md-6 ">
+    <!-- Paso 4 -->
+    <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 5 -->
+       <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
+
+      <!-- Paso 6 -->
+       <article class="d-flex gap-sm-2  mb-5 p-3">
+        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
+          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
+            ?
+          </div>
+        </div>
+        <div class="w-70  text-start ">
+          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
+        </div>
+      </article>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg" alt="">
+</section>
+<section class="d-flex flex-column justify-content-center gap-3 py-5">
+  <div class="text-center">
+    <h1>Lorem, ipsum.</h1>
+    <span>Lorem, ipsum dolor.</span>
   </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" alt="">
-  </div>
-  <div>
-    <img style="height: 100%;width: 100%;object-fit: contain;border: 1px solid black;"  
-      src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg" alt="">
+  <div class="d-flex justify-content-center flex-wrap gap-2">
+    <button style="border: 1px solid black;width: 200px;padding-top: 5px;padding-bottom: 5px;border-radius: 10px;">CTA</button>
+    <button style="border: 1px solid black;width: 200px;padding-top: 5px;padding-bottom: 5px;border-radius: 10px;">Descubre Flai</button>
   </div>
 </section>
 </body>
