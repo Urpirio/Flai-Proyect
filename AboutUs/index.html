@@ -9,7 +9,69 @@
     <title>Flai - AboutUs</title>
     
 </head>
-<body>
+<body id="body">
+  <dialog id="MenuNavegacion" class="Menu" >
+    <style>
+      .Menu{
+        z-index: 20;
+        height: 100vh;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background: #0000001f;
+        display: none;
+        padding: 0;
+        border: none;
+      };
+
+      
+
+    </style>
+    <section style="background: white;height: 100%;width: 80%;">
+      <div class="d-flex justify-content-between align-items-center py-4 px-3 border-bottom">
+        <span style="font-weight: 500;font-size: 3vh,3vw;">Menu</span>
+        <button class="border p-2" style="background: white;display: flex;justify-content: center;align-items: center; " onclick="CloseNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+        </button>
+      </div>
+      <menu class="d-flex flex-column gap-4 menu-a" style="font-size: 2.4vh,3.4vw;" >
+        <a href="" class="text-decoration-none text-blue " >
+         <b>Acceder</b>
+        </a>
+        <a href="" class="text-decoration-none text-blue " >
+         <b>Agenda un demo</b>
+        </a>
+        <a href="" class="text-decoration-none text-dark  " >
+         <b> Descubre Flai</b>
+        </a>
+        <a href="" class="text-decoration-none text-dark" >
+          <b>Flai para empresa</b>
+        </a>
+        <a href="" class="text-decoration-none text-dark" >
+          <b>Flai para transportistas</b>
+        </a>
+        <a href="" class="text-decoration-none text-dark">
+          <b>Contacto</b>
+        </a>
+      </menu>
+    </section>
+  </dialog>
+  <script>
+    const DeployNav = () =>{
+      const MenuNavegacion = document.getElementById('MenuNavegacion');
+      MenuNavegacion.style.display = 'flex';
+      document.getElementById('body').style.overflow = 'hidden';
+    };
+
+    const CloseNav = () =>{
+      const MenuNavegacion = document.getElementById('MenuNavegacion');
+      MenuNavegacion.style.display = 'none';
+      document.getElementById('body').style.overflow = 'scroll';
+
+    };
+ </script>
 <header class="d-flex  align-items-center justify-content-between align-items-md-center justify-content-xl-center justify-content-lg-between  px-1 py-2 border-bottom  w-100 bg-white" style="padding: 10px 10px 10px 10px;position: sticky; z-index: 10;top: 0;">
 	<div style="width: 25%;">
     <a href="/" class="d-flex align-items-center  text-dark text-decoration-none">
@@ -37,13 +99,15 @@
 		<button type="button" class="btn btn-primary" style="font-size: 1.2vw;">Agenda un demo</button>
 	</div>
   <div class="d-md-none"  >
-    <button class="d-flex justify-content-center align-items-center border rounded" style="width: 50px;height: 50px;background: none;">
+    <button class="d-flex justify-content-center align-items-center border rounded" style="width: 50px;height: 50px;background: none;" onclick="DeployNav()">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
       </svg>
     </button>
   </div>
 </header>
+
+
 
 <!-- Todo es -->
 <main>
