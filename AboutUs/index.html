@@ -72,7 +72,24 @@
 
     };
  </script>
-<header class="d-flex  align-items-center justify-content-between align-items-md-center justify-content-xl-center justify-content-lg-between  px-1 py-2 border-bottom  w-100 bg-white" style="padding: 10px 10px 10px 10px;position: sticky; z-index: 10;top: 0;">
+<header class="d-flex  align-items-center justify-content-between align-items-md-center justify-content-xl-center
+ justify-content-lg-between  px-1 py-2 border-bottom  w-100 bg-white Header">
+  <style>
+    .Header{
+      padding: 10px 10px 10px 10px;
+      position: fixed; 
+      z-index: 10;
+    }
+    @media (max-width: 667px) {
+      .Header{
+      padding: 10px 10px 10px 10px;
+      position: sticky; 
+      top: 0;
+      z-index: 10;
+    }
+    }
+  </style>
+
 	<div style="width: 25%;">
     <a href="/" class="d-flex align-items-center  text-dark text-decoration-none">
 		  <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" style="height: 50px;">
@@ -112,7 +129,20 @@
 <!-- Todo es -->
 <main>
 
-<section class="position-relative  d-flex overflow-hidden " >
+<section class="Section1" >
+  <style>
+    .Section1{
+      position: relative;
+      display: flex;
+      overflow: hidden;
+    }
+    @media (max-width: 667px) {
+      .Section1{
+        height: 60vh;
+      }
+    }
+  </style>
+
     <video autoplay muted loop class="  vw-100 d-lg-flex d-none" >
       <source src="/Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
     </video>
@@ -198,8 +228,8 @@
 <style>
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(3, 0.7fr);
+    grid-template-rows: repeat(3, 200px);
     gap: 10px;
     padding: 20px 100px;
   }
@@ -216,6 +246,10 @@
 
   .special-item {
     grid-row: span 2;
+  }
+
+  .special-item2 {
+    grid-column: span 2;
   }
 
   @media (max-width: 1200px) {
@@ -252,10 +286,8 @@
   <div class="special-item">
     <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
   </div>
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div>
+  
+  <div class="special-item2">
     <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
   </div>
   <div>
@@ -302,61 +334,59 @@
 </section>
 
 <!-- Logos aliados y clientes -->
-<section class="container py-4">
-  <div class="text-center mb-4">
+<section class="d-flex justify-content-start  py-4 border overflow-scroll  align-items-center">
+  <div class="text-center d-flex  align-items-center">
     <h4>Logos aliados y clientes</h4>
   </div>
   
-  <div class="row g-3">
+  <div class="d-flex flex-column  gap-1 w-100 ">
+    
     <!-- Repite este bloque por cada imagen -->
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+    <div class="d-flex justify-content-start gap-1 ">
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+      </div>
     </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+    <div class="d-flex justify-content-start gap-1">
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
+      </div>
+      <div class="col-6 col-md-4" style="max-width: 300px;">
+        <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
            class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
+      </div>
     </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-    </div>
+    
   </div>
 </section>
 
