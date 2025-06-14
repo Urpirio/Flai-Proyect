@@ -10,552 +10,482 @@
     
 </head>
 <body id="body">
-  <dialog id="MenuNavegacion" class="Menu" >
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flai - Soluciones Logísticas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-      .Menu{
-        z-index: 20;
-        height: 100vh;
-        width: 100%;
-        position: sticky;
-        top: 0;
-        background: #0000001f;
-        display: none;
-        padding: 0;
-        border: none;
-      };
-
-      
-
+        /* Estilos personalizados mínimos */
+        .hero-video {
+            height: 60vh;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+            padding: 20px;
+        }
+        
+        .image-grid > div {
+            border: 1px solid #dee2e6;
+            overflow: hidden;
+        }
+        
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .special-item {
+            grid-row: span 2;
+        }
+        
+        .special-item2 {
+            grid-column: span 2;
+        }
+        
+        @media (max-width: 1200px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 300px);
+            }
+            .special-item {
+                grid-row: span 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, 200px);
+            }
+            .special-item2 {
+                grid-column: span 1;
+            }
+        }
+        
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .client-logo {
+            height: 100px;
+            object-fit: contain;
+        }
     </style>
-    <section style="background: white;height: 100%;width: 80%;">
-      <div class="d-flex justify-content-between align-items-center py-4 px-3 border-bottom">
-        <span style="font-weight: 500;font-size: 3vh,3vw;">Menu</span>
-        <button class="border p-2" style="background: white;display: flex;justify-content: center;align-items: center; " onclick="CloseNav()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-          </svg>
-        </button>
-      </div>
-      <menu class="d-flex flex-column gap-4 menu-a" style="font-size: 2.4vh,3.4vw;" >
-        <a href="" class="text-decoration-none text-blue " >
-         <b>Acceder</b>
-        </a>
-        <a href="" class="text-decoration-none text-blue " >
-         <b>Agenda un demo</b>
-        </a>
-        <a href="" class="text-decoration-none text-dark  " >
-         <b> Descubre Flai</b>
-        </a>
-        <a href="" class="text-decoration-none text-dark" >
-          <b>Flai para empresa</b>
-        </a>
-        <a href="" class="text-decoration-none text-dark" >
-          <b>Flai para transportistas</b>
-        </a>
-        <a href="" class="text-decoration-none text-dark">
-          <b>Contacto</b>
-        </a>
-      </menu>
-    </section>
-  </dialog>
-  <script>
-    const DeployNav = () =>{
-      const MenuNavegacion = document.getElementById('MenuNavegacion');
-      MenuNavegacion.style.display = 'flex';
-      document.getElementById('body').style.overflow = 'hidden';
-    };
-
-    const CloseNav = () =>{
-      const MenuNavegacion = document.getElementById('MenuNavegacion');
-      MenuNavegacion.style.display = 'none';
-      document.getElementById('body').style.overflow = 'scroll';
-
-    };
- </script>
-<header class="d-flex  align-items-center justify-content-between align-items-md-center justify-content-xl-center
- justify-content-lg-between  px-1 py-2 border-bottom  w-100 bg-white Header">
-  <style>
-    .Header{
-      padding: 10px 10px 10px 10px;
-      position: fixed; 
-      z-index: 10;
-    }
-    @media (max-width: 667px) {
-      .Header{
-      padding: 10px 10px 10px 10px;
-      position: sticky; 
-      top: 0;
-      z-index: 10;
-    }
-    }
-  </style>
-
-	<div style="width: 25%;">
-    <a href="/" class="d-flex align-items-center  text-dark text-decoration-none">
-		  <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" style="height: 50px;">
-	  </a>
-  </div>
-
-	<nav class="d-md-flex d-none mb-md-0 " style="width: 70%;justify-content: center;align-items: center;">
-		<div>
-      <a href="#" class="nav-link px-2 link-secondary" style="font-size: 1.4vw;">Descubre Flai</a>
-    </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark" style="font-size: 1.4vw;">Flai para empresa</a>
-    </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark" style="font-size: 1.4vw;">Flai para transportistas</a>
-    </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark" style="font-size: 1.4vw;">Contacto</a>
-    </div>
-	</nav>
-
-	<div class="col-md-3 d-none d-md-flex justify-content-end  text-end" style="width: 25%;">
-		<button type="button" class="btn btn-outline-primary me-2 " style="font-size: 1.2vw;">Acceder</button>
-		<button type="button" class="btn btn-primary" style="font-size: 1.2vw;">Agenda un demo</button>
-	</div>
-  <div class="d-md-none"  >
-    <button class="d-flex justify-content-center align-items-center border rounded" style="width: 50px;height: 50px;background: none;" onclick="DeployNav()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-      </svg>
-    </button>
-  </div>
-</header>
-
-
-
-<!-- Todo es -->
-<main>
-
-<section class="Section1" >
-  <style>
-    .Section1{
-      position: relative;
-      display: flex;
-      overflow: hidden;
-    }
-    @media (max-width: 667px) {
-      .Section1{
-        height: 60vh;
-      }
-    }
-  </style>
-
-    <video autoplay muted loop class="  vw-100 d-lg-flex d-none" >
-      <source src="/Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
-    </video>
-  <div class="position-absolute vw-100 vh-100  d-lg-flex d-none justify-content-center align-items-center flex-column gap-3 text-center bg-opacity-50">
-    <div class="w-75">
-      <h1>Transforma la logística para que tú puedas transformar tu negocio</h1>
-      <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae magni laudantium numquam quae dolores aliquid commodi eaque, ipsum at!</p>
-    </div>
-    <div class="w-100 d-flex justify-content-center">
-      <a href="#" class="btn btn-primary rounded-pill px-4">Agenda tu demo</a>
-    </div>
-  </div>
-  <div class=" position-relative vw-100 vh-100 border d-lg-none d-flex justify-content-start  align-items-center align-items-center  flex-column gap-3 text-center bg-opacity-50">
-    <div class="w-75  pt-5 ">
-      <h1>Transforma la logística para que tú puedas transformar tu negocio</h1>
-      <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae magni laudantium numquam quae dolores aliquid commodi eaque, ipsum at!</p>
-    </div>
-    <div class="w-100 d-flex justify-content-center">
-      <a href="#" class="btn btn-primary rounded-pill px-4">Agenda tu demo</a>
-    </div>
-  </div>
-</section>
-
-<!-- Problemas que tienen tus clientes -->
-<section class="container py-4">
-  <div class="row justify-content-around align-items-center g-3">
-    <div class="col-md-6">
-      <img class="img-fluid rounded" src="https://cdn.pixabay.com/photo/2017/12/01/20/56/treetops-2991743_1280.jpg" alt="Img random">
-    </div>
-    <div class="col-md-6">
-      <h1>Problemas que tienen tus clientes</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Blanditiis molestiae
-        itaque quos culpa eius quisquam magni at
-        sunt beatae. Architecto minima sequi velit,
-        qui facilis adipisci ea eligendi sapiente eaque!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Blanditiis molestiae
-        itaque quos culpa eius quisquam magni at
-        sunt beatae. Architecto minima sequi velit,
-        qui facilis adipisci ea eligendi sapiente eaque!
-      </p>
-    </div>
-  </div>
-</section>
-<!-- ¿Por qué existimos? -->
-<section class="text-center py-5">
-  <div class="container">
-    <h1>¿Por qué existimos?</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Laborum cum asperiores ipsum? Excepturi impedit, neque
-      eaque possimus voluptatibus at velit?
-    </p>
-  </div>
-</section>
-
-<section class="py-4">
-  <div class="container">
-    <div class="row justify-content-center g-4">
-      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
-        <h1>Misión</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, consequuntur.</p>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
-        <h1>Visión</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, blanditiis!</p>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center text-center">
-        <h1>Valores</h1>
-        <p>
-          Transparencia, Flexibilidad, Precisión, Innovación, Escalabilidad,
-          Servicio humano
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 0.7fr);
-    grid-template-rows: repeat(3, 200px);
-    gap: 10px;
-    padding: 20px 100px;
-  }
-
-  .image-grid > div {
-    border: 1px solid black;
-  }
-
-  .image-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .special-item {
-    grid-row: span 2;
-  }
-
-  .special-item2 {
-    grid-column: span 2;
-  }
-
-  @media (max-width: 1200px) {
-    .image-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 300px);
-      padding: 20px 50px;
-    }
-    .special-item {
-      grid-row: span 1;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .image-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 200px);
-      padding: 20px;
-    }
-  }
-</style>
-
-<section class="image-grid">
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-
-  <div class="special-item">
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  
-  <div class="special-item2">
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-  <div>
-    <img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Img">
-  </div>
-</section>
-
-
-
-<!-- Video Institucional -->
-<section class="w-100 d-flex flex-column align-items-center text-white py-4" style="background-color: #000; border: 1px solid black;">
-  <div class="w-100 text-center">
-    <h1>Video Institucional</h1>
-  </div>
-
-  <div class="d-flex justify-content-center py-4 w-100">
-    <video class="w-75" controls>
-      <source src="../Videos/KYLE - iSpy feat. Lil Yachty [Official Music Video].mp4" type="video/mp4">
-      No está disponible
-    </video>
-  </div>
-
-  <div class="d-flex flex-wrap justify-content-center gap-4 w-100  p-3">
-    <article class="d-flex flex-column align-items-center justify-content-center">
-      <h2>+100</h2>
-      <span>ABC</span>
-    </article>
-    <article class="d-flex flex-column align-items-center justify-content-center">
-      <h2>+100</h2>
-      <span>ABC</span>
-    </article>
-    <article class="d-flex flex-column align-items-center justify-content-center">
-      <h2>+100</h2>
-      <span>ABC</span>
-    </article>
-    <article class="d-flex flex-column align-items-center justify-content-center">
-      <h2>+100</h2>
-      <span>ABC</span>
-    </article>
-  </div>
-</section>
-
-<!-- Logos aliados y clientes -->
-<section class="d-flex justify-content-start  py-4 border overflow-scroll  align-items-center">
-  <div class="text-center d-flex  align-items-center">
-    <h4>Logos aliados y clientes</h4>
-  </div>
-  
-  <div class="d-flex flex-column  gap-1 w-100 ">
-    
-    <!-- Repite este bloque por cada imagen -->
-    <div class="d-flex justify-content-start gap-1 ">
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-    </div>
-    <div class="d-flex justify-content-start gap-1">
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-      <div class="col-6 col-md-4" style="max-width: 300px;">
-        <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg"
-           class="img-fluid border p-1" style="object-fit: contain; height: 100px; width: 100%;" alt="">
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- ¿Cómo Flai puede ayudarte? -->
-<section class="container py-4">
-  <div class="row justify-content-center">
-    
-    <!-- Columna izquierda -->
-    <div class="col-12 col-md-6 mb-4">
-      <h1>¿Cómo Flai puede ayudarte?</h1>
-      <div class="fs-5">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At facilis odio consequatur corrupti deleniti, perferendis quam eaque culpa voluptatum dolor nobis voluptate et quaerat maiores quis quibusdam quae quo eveniet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eos ipsam incidunt recusandae, reprehenderit pariatur minus error perspiciatis accusamus quam quidem optio magni nam et quasi sed adipisci voluptate dignissimos.</p>
-      </div>
-      <button class="btn border border-dark rounded-3 py-2 mt-3" style="width: 200px;">CTA</button>
+</head>
+<body>
+    <!-- Menú Offcanvas (Mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-medium fs-4" id="mobileMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <menu class="d-flex flex-column gap-4">
+                <a href="#" class="text-decoration-none text-primary fw-bold">Acceder</a>
+                <a href="#" class="text-decoration-none text-primary fw-bold">Agenda un demo</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Descubre Flai</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Flai para empresa</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Flai para transportistas</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Contacto</a>
+            </menu>
+        </div>
     </div>
 
-    <!-- Columna derecha -->
-    <div class="col-12 col-md-6 ">
-      <!-- Paso 1 -->
-      <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5">
-        <div class="w-20 justify-content-center align-items-center d-flex " style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            1
-          </div>
-        </div>
-        <div class="w-70 text-center text-sm-start border p-2">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+    <!-- Header -->
+    <header class="sticky-top bg-white shadow-sm py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                        <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" alt="Flai Logo" class="img-fluid">
+                    </a>
+                </div>
 
-      <!-- Paso 2 -->
-       <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5">
-        <div class="w-20 justify-content-center align-items-center d-flex  " style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            2
-          </div>
-        </div>
-        <div class="w-70 text-center text-sm-start border p-2">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+                <!-- Navegación Desktop -->
+                <nav class="d-none d-md-flex align-items-center gap-4">
+                    <a href="#" class="nav-link text-secondary">Descubre Flai</a>
+                    <a href="#" class="nav-link text-dark">Flai para empresa</a>
+                    <a href="#" class="nav-link text-dark">Flai para transportistas</a>
+                    <a href="#" class="nav-link text-dark">Contacto</a>
+                </nav>
 
-      <!-- Paso 3 -->
-       <article class="d-sm-flex  align-items-sm-center justify-content-sm-start mb-5 ">
-        <div class="w-20 justify-content-center align-items-center d-flex  " style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            3
-          </div>
-        </div>
-        <div class="w-70 text-center text-sm-start border p-2">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-<!-- Trabaja con nosotros -->
-<section class="d-flex flex-wrap justify-content-center justify-content-sm-around  border p-5 gap-3 gap-sm-0" >
-  <div class="col-6 d-flex flex-column align-items-center" style="min-width: 300px;">
-   <div>
-     <h2>Trabaja con nosotros</h2>
-    <span>Envia tu CV empleos@flai.com.do</span>
-   </div>
-  </div>
-  <div class="col-6 d-flex justify-content-center align-items-center" style="min-width: 300px;">
-    <button style="border: 1px solid black;width: 200px;padding-top: 10px;padding-bottom: 10px;border-radius: 10px;">Ver LinkedIn</button>
-  </div>
-</section>
-<section>
-  <div style="text-align: center;">
-    <h1>FAQ</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores qui debitis et aperiam vel in deserunt quod mollitia dolorum corporis ipsam consectetur dicta, velit cumque neque quos aliquid quas?</p>
-  </div>
-</section>
-<section style="display: flex;justify-content: space-around;flex-wrap: wrap;">
-  <div class="col-12 col-md-6 ">
-    <!-- Paso 1 -->
-    <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
-        </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+                <!-- Botones Desktop -->
+                <div class="d-none d-md-flex gap-2">
+                    <button type="button" class="btn btn-outline-primary">Acceder</button>
+                    <button type="button" class="btn btn-primary">Agenda un demo</button>
+                </div>
 
-      <!-- Paso 2 -->
-       <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
+                <!-- Botón Mobile -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
         </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+    </header>
 
-      <!-- Paso 3 -->
-       <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
-        </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
-  </div>
-  <div class="col-12 col-md-6 ">
-    <!-- Paso 4 -->
-    <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
-        </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-video position-relative">
+            <video autoplay muted loop class="w-100 h-100 d-none d-lg-block object-fit-cover">
+                <source src="/Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4">
+            </video>
+            
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center hero-content">
+                <div class="container text-center text-white">
+                    <h1 class="display-4 mb-3">Transforma la logística para que tú puedas transformar tu negocio</h1>
+                    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae magni laudantium numquam quae dolores aliquid commodi eaque, ipsum at!</p>
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-4">Agenda tu demo</a>
+                </div>
+            </div>
+            
+            <!-- Versión Mobile -->
+            
+        </section>
 
-      <!-- Paso 5 -->
-       <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
-        </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
+        <!-- Problemas que tienen tus clientes -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <img class="img-fluid rounded shadow" src="https://cdn.pixabay.com/photo/2017/12/01/20/56/treetops-2991743_1280.jpg" alt="Problemas de clientes">
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="mb-4">Problemas que tienen tus clientes</h1>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae itaque quos culpa eius quisquam magni at sunt beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae itaque quos culpa eius quisquam magni at sunt beatae. Architecto minima sequi velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Paso 6 -->
-       <article class="d-flex gap-sm-2  mb-5 p-3">
-        <div class="w-20 justify-content-sm-end  d-flex" style="min-width: 80px;">
-          <div class="border border-dark rounded-circle d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
-            ?
-          </div>
+        <!-- ¿Por qué existimos? -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h1 class="mb-3">¿Por qué existimos?</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cum asperiores ipsum? Excepturi impedit, neque eaque possimus voluptatibus at velit?
+                </p>
+            </div>
+        </section>
+
+        <!-- Misión, Visión, Valores -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 h-100">
+                            <h2 class="mb-3">Misión</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, consequuntur.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 h-100">
+                            <h2 class="mb-3">Visión</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, blanditiis!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-4 h-100">
+                            <h2 class="mb-3">Valores</h2>
+                            <p>Transparencia, Flexibilidad, Precisión, Innovación, Escalabilidad, Servicio humano</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Imágenes -->
+        <section class="py-5">
+            <div class="container">
+                <div class="image-grid">
+                    <div><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 1"></div>
+                    <div><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 2"></div>
+                    <div><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 3"></div>
+                    <div class="special-item"><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 4"></div>
+                    <div class="special-item2"><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 5"></div>
+                    <div><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 6"></div>
+                    <div><img src="https://i.pinimg.com/736x/a9/c6/d0/a9c6d022f1f6120c5a2b3c1fc9601c76.jpg" alt="Imagen 7"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Institucional -->
+        <section class="py-5 bg-dark text-white">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1>Video Institucional</h1>
+                </div>
+                
+                <div class="ratio ratio-16x9 mb-5">
+                    <video controls>
+                        <source src="../Videos/KYLE - iSpy feat. Lil Yachty [Official Music Video].mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4">
+                        <h2 class="text-primary">+100</h2>
+                        <span>Clientes satisfechos</span>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h2 class="text-primary">+100</h2>
+                        <span>Proyectos completados</span>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h2 class="text-primary">+100</h2>
+                        <span>Transportistas asociados</span>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h2 class="text-primary">+100</h2>
+                        <span>Empresas colaboradoras</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logos aliados y clientes -->
+        <section class="py-5">
+            <div class="container">
+                <h4 class="mb-4 text-center">Logos aliados y clientes</h4>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" class="client-logo">
+                    <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" class="client-logo">
+                    <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" class="client-logo">
+                    <img src="https://i.pinimg.com/736x/df/51/ba/df51bae01cd310b9012c8b65de3c6b2f.jpg" class="client-logo">
+                    <img src="https://i.pinimg.com/736x/6c/ac/7e/6cac7ebb906f588718fc66d1468c4e79.jpg" class="client-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿Cómo Flai puede ayudarte? -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h1 class="mb-4">¿Cómo Flai puede ayudarte?</h1>
+                        <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At facilis odio consequatur corrupti deleniti, perferendis quam eaque culpa voluptatum dolor nobis voluptate et quaerat maiores quis quibusdam quae quo eveniet.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eos ipsam incidunt recusandae, reprehenderit pariatur minus error perspiciatis accusamus quam quidem optio magni nam et quasi sed adipisci voluptate dignissimos.</p>
+                        <button class="btn btn-outline-dark mt-3 px-4 py-2">Más información</button>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <!-- Paso 1 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">1</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 2 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">2</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 3 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">3</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trabaja con nosotros -->
+        <section class="py-5 border-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h2 class="mb-2">Trabaja con nosotros</h2>
+                        <p class="mb-0">Envia tu CV a <a href="mailto:empleos@flai.com.do">empleos@flai.com.do</a></p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="btn btn-outline-dark px-4">Ver LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="mb-3">Preguntas Frecuentes</h1>
+                    <p class="lead mx-auto" style="max-width: 700px;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A asperiores qui debitis et aperiam vel in deserunt quod mollitia dolorum corporis ipsam consectetur dicta.
+                    </p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Pregunta 1 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 2 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 3 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <!-- Pregunta 4 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 5 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pregunta 6 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">?</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 class="mb-3">¿Listo para transformar tu logística?</h1>
+                <p class="lead mb-4">Contáctanos hoy mismo y descubre cómo podemos ayudarte</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#" class="btn btn-light px-4">Agendar demo</a>
+                    <a href="#" class="btn btn-outline-light px-4">Descubre Flai</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" alt="Flai Logo" style="height: 50px;" class="mb-3">
+                    <p>Transformando la logística para transformar tu negocio.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@flai.com.do</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Santo Domingo, RD</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Flai. Todos los derechos reservados.</p>
+            </div>
         </div>
-        <div class="w-70  text-start ">
-          <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consectetur!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque. Nesciunt tenetur porro hic minus facilis!</p>
-        </div>
-      </article>
-  </div>
-</section>
-<section class="d-flex flex-column justify-content-center gap-3 py-5">
-  <div class="text-center">
-    <h1>Lorem, ipsum.</h1>
-    <span>Lorem, ipsum dolor.</span>
-  </div>
-  <div class="d-flex justify-content-center flex-wrap gap-2">
-    <button style="border: 1px solid black;width: 200px;padding-top: 5px;padding-bottom: 5px;border-radius: 10px;">CTA</button>
-    <button style="border: 1px solid black;width: 200px;padding-top: 5px;padding-bottom: 5px;border-radius: 10px;">Descubre Flai</button>
-  </div>
-</section>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </body>
 </html>
