@@ -3,122 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <title>Flai</title>
+    <style>
+        /* Estilos personalizados mínimos */
+        .hero-video {
+            height: 60vh;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+            padding: 20px;
+        }
+        
+        .image-grid > div {
+            border: 1px solid #dee2e6;
+            overflow: hidden;
+        }
+        
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .special-item {
+            grid-row: span 2;
+        }
+        
+        .special-item2 {
+            grid-column: span 2;
+        }
+        
+        @media (max-width: 1200px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 300px);
+            }
+            .special-item {
+                grid-row: span 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(7, 200px);
+            }
+            .special-item2 {
+                grid-column: span 1;
+            }
+        }
+        
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .client-logo {
+            height: 100px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
-    <header class="d-flex  align-items-center justify-content-between align-items-md-center justify-content-xl-center
- justify-content-lg-between  px-1 py-2 border-bottom  w-100 bg-white Header">
-  <style>
-    .Header{
-      padding: 10px 10px 10px 10px;
-      position: sticky; 
-      /* z-index: 10; */
-
-    }
-    @media (max-width: 667px) {
-      .Header{
-      padding: 10px 10px 10px 10px;
-      position: sticky; 
-      top: 0;
-      z-index: 10;
-    }
-    }
-    .Navdesktop{
-      font-size: 1.3vw;
-      font-weight: 300;
-    }
-  </style>
-
-	<div style="width: 25%;">
-    <a href="/" class="d-flex align-items-center  text-dark text-decoration-none">
-		  <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" style="height: 50px;">
-	  </a>
-  </div>
-
-	<nav class="d-md-flex d-none mb-md-0 Navdesktop" style="width: 70%;justify-content: center;align-items: center;">
-		<div>
-      <a href="#" class="nav-link px-2 link-secondary" >Descubre Flai</a>
+<!-- Menú Offcanvas (Mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-medium fs-4" id="mobileMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <menu class="d-flex flex-column gap-4">
+                <a href="#" class="text-decoration-none text-primary fw-bold">Acceder</a>
+                <a href="#" class="text-decoration-none text-primary fw-bold">Agenda un demo</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Descubre Flai</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Flai para empresa</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Flai para transportistas</a>
+                <a href="#" class="text-decoration-none text-dark fw-bold">Contacto</a>
+            </menu>
+        </div>
     </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark" >Flai para empresa</a>
-    </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark" >Flai para transportistas</a>
-    </div>
-		<div>
-      <a href="#" class="nav-link px-2 link-dark">Contacto</a>
-    </div>
-	</nav>
 
-	<div class="col-md-3 d-none d-md-flex justify-content-end  text-end" style="width: 25%;">
-		<button type="button" class="btn btn-outline-primary me-2 " style="font-size: 1.2vw;">Acceder</button>
-		<button type="button" class="btn btn-primary" style="font-size: 1.2vw;">Agenda un demo</button>
-	</div>
-  <div class="d-md-none"  >
-    <button class="d-flex justify-content-center align-items-center border rounded" style="width: 50px;height: 50px;background: none;" onclick="DeployNav()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-      </svg>
-    </button>
-  </div>
-</header>
+    <!-- Header -->
+    <header class="sticky-top bg-white shadow-sm py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                        <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" alt="Flai Logo" class="img-fluid">
+                    </a>
+                </div>
+
+                <!-- Navegación Desktop -->
+                <nav class="d-none d-md-flex align-items-center gap-4">
+                    <a href="#" class="nav-link text-secondary">Descubre Flai</a>
+                    <a href="#" class="nav-link text-dark">Flai para empresa</a>
+                    <a href="#" class="nav-link text-dark">Flai para transportistas</a>
+                    <a href="#" class="nav-link text-dark">Contacto</a>
+                </nav>
+
+                <!-- Botones Desktop -->
+                <div class="d-none d-md-flex gap-2">
+                    <button type="button" class="btn btn-outline-primary">Acceder</button>
+                    <button type="button" class="btn btn-primary">Agenda un demo</button>
+                </div>
+
+                <!-- Botón Mobile -->
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
 
 
 
 <main>
-<section class=" py-5 px-4">
+
+<section class="py-5">
   <div class="container">
-    <div class="row justify-content-center align-items-center g-4 flex-wrap">
+    <div class="row align-items-center g-4">
       <!-- Columna izquierda -->
-      <div class="col-12 col-md-6">
-        <div class="border border-dark p-3 h-100">
-         
-          <nav class="mb-3">
-            <a href="#" class="text-decoration-none">Flai</a> >
-            <a href="#" class="text-decoration-none">Productos</a> >
-            <a href="#" class="text-decoration-none">Flai para {Variable}</a>
+      <div class="col-md-6">
+        <div class="p-3 h-100">
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Flai</a></li>
+              <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Productos</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Flai para {Variable}</li>
+            </ol>
           </nav>
 
           <!-- Título y descripción -->
           <article class="mb-4">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem quis corporis est, delectus ab excepturi.</p>
+            <h1 class="mb-3">Lorem ipsum dolor sit amet.</h1>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem quis corporis est, delectus ab excepturi.</p>
           </article>
 
           <!-- Botones -->
-          <div class="mb-4">
-            <button class="btn btn-outline-dark me-2">Agendar un demo</button>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-outline-dark">Agendar un demo</button>
             <button class="btn btn-outline-dark">Ver servicios</button>
           </div>
 
           <!-- Métricas -->
           <div class="row text-center">
             <div class="col-6 col-sm-3 mb-3">
-              <h2>+100</h2>
-              <span>ABC</span>
+              <h3 class="text-primary">+100</h3>
+              <small>ABC</small>
             </div>
             <div class="col-6 col-sm-3 mb-3">
-              <h2>+100</h2>
-              <span>ABC</span>
+              <h3 class="text-primary">+100</h3>
+              <small>ABC</small>
             </div>
             <div class="col-6 col-sm-3 mb-3">
-              <h2>+100</h2>
-              <span>ABC</span>
+              <h3 class="text-primary">+100</h3>
+              <small>ABC</small>
             </div>
             <div class="col-6 col-sm-3 mb-3">
-              <h2>+100</h2>
-              <span>ABC</span>
+              <h3 class="text-primary">+100</h3>
+              <small>ABC</small>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Columna derecha -->
-      <div class="col-12 col-md-6">
-        <div class="border border-dark h-100">
-          <video src="../Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4"
-            class="w-100 h-100" autoplay muted loop></video>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <video autoplay  loop class="w-100 h-100">
+            <source src="../Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4" type="video/mp4" >
+          </video>
         </div>
       </div>
     </div>
@@ -126,63 +196,389 @@
 </section>
 
 
-<section class="text-white text-center position-relative overflow-hidden">
-  <!-- Fondo negro detrás de las tarjetas -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between p-3 z-n1">
-    <div class="bg-dark w-100 h-50 rounded-4"></div>
-  </div>
-
-  <!-- Contenido principal -->
-  <div class="container py-5 px-md-5 position-relative z-1">
-    <p class="fs-5 mb-5">
+<section class="py-5 bg-dark text-white position-relative">
+  <div class="container position-relative z-1 py-4">
+    <p class="fs-5 text-center mb-5">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     </p>
 
-    <div class="row justify-content-center g-4">
+    <div class="row g-4">
       <!-- Tarjeta 1 -->
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm p-3">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Beneficio 1 del producto</h5>
-            <p class="card-text">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body text-center p-4">
+            <h5 class="card-title fw-bold mb-3">Beneficio 1 del producto</h5>
+            <p class="card-text mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             </p>
+            <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="img-fluid rounded" alt="Beneficio 1">
           </div>
-          <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="card-img-bottom" alt="Beneficio 1">
         </div>
-      </article>
+      </div>
 
       <!-- Tarjeta 2 -->
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm p-3">
-          <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="card-img-top" alt="Beneficio 2">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Beneficio 2 del producto</h5>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body text-center p-4">
+            <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="img-fluid rounded mb-4" alt="Beneficio 2">
+            <h5 class="card-title fw-bold mb-3">Beneficio 2 del producto</h5>
             <p class="card-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             </p>
           </div>
         </div>
-      </article>
+      </div>
 
       <!-- Tarjeta 3 -->
-      <article class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm p-3">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Beneficio 3 del producto</h5>
-            <p class="card-text">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body text-center p-4">
+            <h5 class="card-title fw-bold mb-3">Beneficio 3 del producto</h5>
+            <p class="card-text mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             </p>
+            <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="img-fluid rounded" alt="Beneficio 3">
           </div>
-          <img src="https://i.pinimg.com/736x/b5/28/07/b5280781ac2a53da10ab5e457c0afb1f.jpg" class="card-img-bottom" alt="Beneficio 3">
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
+  <div class="container py-5">
+    <h2 class="text-center mb-5">¿Cuál es la diferencia?</h2>
 
+    <div class="comparison-table">
+      <div class="row mb-2 text-center">
+        <div class="col-4"></div>
+        <div class="col-4 col-title">Método tradicional</div>
+        <div class="col-4 col-title">Con FLAI</div>
+      </div>
 
+      <!-- Fila 1 -->
+      <div class="row align-items-center text-center mb-3">
+        <div class="col-4 text-start">Lorem ipsum dolor sit</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+      </div>
+      <!-- Fila 2 -->
+      <div class="row align-items-center text-center mb-3">
+        <div class="col-4 text-start">Lorem ipsum dolor sit</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+      </div>
+      <!-- Fila 3 -->
+      <div class="row align-items-center text-center mb-3">
+        <div class="col-4 text-start">Lorem ipsum dolor sit</div>
+        <div class="col-4 text-secondary"><span class="cross">✖</span> ABC</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+      </div>
+      <!-- Fila 4 -->
+      <div class="row align-items-center text-center mb-3">
+        <div class="col-4 text-start">Lorem ipsum dolor sit</div>
+        <div class="col-4 text-secondary"><span class="cross">✖</span> ABC</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+      </div>
+      <!-- Fila 5 -->
+      <div class="row align-items-center text-center mb-3">
+        <div class="col-4 text-start">Lorem ipsum dolor sit</div>
+        <div class="col-4 text-secondary"><span class="cross">✖</span> ABC</div>
+        <div class="col-4 text-secondary"><span class="check">✔</span> ABC</div>
+      </div>
+    </div>
+  </div>
+<section class="py-5 border-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h2 class="mb-2">Del paso hoy empieza ya</h2>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="btn btn-outline-dark px-4">Ver LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="d-flex flex-column py-3 px-2">
+    <div class="text-center mb-5">
+        <h1>Prueba Social</h1>
+    </div>
+    
+    <div class="row border justify-content-center g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Testimonial 5 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <!-- Testimonial 6 -->
+        <div class="col-lg-4 col-md-6">
+            <article class="d-flex flex-column">
+                <div class="ps-3 d-flex">
+                    <span class="fw-medium fs-5 translate-y-10 bg-white ps-2 pe-2">Testimonio</span>
+                </div>
+                <div class="d-flex p-3 gap-3 border border-dark rounded-5">
+                    <div class="w-30">
+                        <img class="w-100 h-100 object-fit-cover rounded-5" src="https://i.pinimg.com/736x/8d/95/03/8d9503a77e4c21ebf0ced6c252819a0e.jpg" alt="Testimonial">
+                    </div>
+                    <div class="w-70">
+                        <div class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Nombre</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam quia dolore quibusdam voluptate quo maxime minima, ipsa perferendis blanditiis!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<section>
+  <div>
+    <h1>Requisitos x tipo</h1>
+  </div>
+  <div></div>
+</section>  
+<section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h1 class="mb-4">Paso</h1>
+                        <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At facilis odio consequatur corrupti deleniti, perferendis quam eaque culpa voluptatum dolor nobis voluptate et quaerat maiores quis quibusdam quae quo eveniet.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eos ipsam incidunt recusandae, reprehenderit pariatur minus error perspiciatis accusamus quam quidem optio magni nam et quasi sed adipisci voluptate dignissimos.</p>
+                        <button class="btn btn-outline-dark mt-3 px-4 py-2">Más información</button>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <!-- Paso 1 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">1</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 2 -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">2</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Paso 3 -->
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="rounded-circle border border-dark d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">3</div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum mollitia distinctio architecto atque eaque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="py-5">
+            <div class="container">
+                <div class="row  align-items-center g-4">
+                    
+                    <div class="col-md-6">
+                        <h1 class="mb-4">Problemas que tienen tus clientes</h1>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae itaque quos culpa eius quisquam magni at sunt beatae.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae itaque quos culpa eius quisquam magni at sunt beatae. Architecto minima sequi velit.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid rounded shadow" src="https://cdn.pixabay.com/photo/2017/12/01/20/56/treetops-2991743_1280.jpg" alt="Problemas de clientes">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+<section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 class="mb-3">¿Listo para transformar tu logística?</h1>
+                <p class="lead mb-4">Contáctanos hoy mismo y descubre cómo podemos ayudarte</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#" class="btn btn-light px-4">Agendar demo</a>
+                    <a href="#" class="btn btn-outline-light px-4">Descubre Flai</a>
+                </div>
+            </div>
+        </section>
 </main>
+<footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="https://flai.com.do/wp-content/uploads/2024/05/Flai-Logo.png" alt="Flai Logo" style="height: 50px;" class="mb-3">
+                    <p>Transformando la logística para transformar tu negocio.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@flai.com.do</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Santo Domingo, RD</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Flai. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
