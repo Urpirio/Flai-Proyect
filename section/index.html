@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- <section class=" bg-dark text-white py-5">
+	<div class="container">
+		<div class=" text-center">
+			<h1>Requisitos x tipo</h1>
+		</div>
+		<div class="d-flex flex-column justify-content-center align-items-center  py-1 ">
+			<div class="d-flex  w-100 gap-1  justify-content-start ">
+				<button onclick="Tipo({num:1})" class="col-3 col-lg-2 border-top-1 border-left border-right border-bottom-0 border  rounded-top bg-secundary" id="btnTipo1">Tipo 1</button>
+				<button onclick="Tipo({num:2})" class="col-3 col-lg-2 border-top-1 border-left border-right border-bottom-0 border  rounded-top bg-white" id="btnTipo2">Tipo 2</button>
+				<button onclick="Tipo({num:3})" class="col-3 col-lg-2 border-top-1 border-left border-right border-bottom-0 border  rounded-top bg-white" id="btnTipo3">Tipo 3</button>
+			</div>
+			<article class="border w-100 p-5 rounded-bottom-4 d-flex flex-column" id="Tipo1">
+				<div>
+					<h2>descripción 1</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis sapiente quis porro unde animi qui nemo necessitatibus fugit et dolorum quisquam temporibus iure, est, ad distinctio excepturi? Harum, excepturi earum!</p>
+				</div>
+				<div>
+					<h2>Requisitos</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit autem nobis non voluptatibus ullam quod iusto eligendi sunt porro dolores eos rerum sint maxime, cum recusandae amet dicta veritatis consectetur?</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit quibusdam excepturi aperiam eaque, dolore consequatur beatae quis eos. Libero aspernatur odit expedita doloremque, assumenda ea rem veritatis. Quam, aliquam?</p>
+				</div>
+			</article>
+            <article class="border w-100 p-5 rounded-bottom-4 d-none flex-column" id="Tipo2">
+				<div>
+					<h2>descripción 2</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis sapiente quis porro unde animi qui nemo necessitatibus fugit et dolorum quisquam temporibus iure, est, ad distinctio excepturi? Harum, excepturi earum!</p>
+				</div>
+				<div>
+					<h2>Requisitos</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit autem nobis non voluptatibus ullam quod iusto eligendi sunt porro dolores eos rerum sint maxime, cum recusandae amet dicta veritatis consectetur?</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit quibusdam excepturi aperiam eaque, dolore consequatur beatae quis eos. Libero aspernatur odit expedita doloremque, assumenda ea rem veritatis. Quam, aliquam?</p>
+				</div>
+			</article>
+            <article class="border w-100 p-5 rounded-bottom-4 d-none flex-column" id="Tipo3">
+				<div>
+					<h2>descripción 3</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis sapiente quis porro unde animi qui nemo necessitatibus fugit et dolorum quisquam temporibus iure, est, ad distinctio excepturi? Harum, excepturi earum!</p>
+				</div>
+				<div>
+					<h2>Requisitos</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit autem nobis non voluptatibus ullam quod iusto eligendi sunt porro dolores eos rerum sint maxime, cum recusandae amet dicta veritatis consectetur?</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit quibusdam excepturi aperiam eaque, dolore consequatur beatae quis eos. Libero aspernatur odit expedita doloremque, assumenda ea rem veritatis. Quam, aliquam?</p>
+				</div>
+			</article>
+		</div>
+	</div>
+    <script>
+        const Tipo  = ({num}) =>{
+            for(let x = 1; x < 4;x++){
+                if(x == num){
+                    const tp = document.getElementById(`Tipo${x}`);
+                    tp.classList.replace('d-none','d-flex');
+                    const btntp = document.getElementById(`btnTipo${x}`);
+                    btntp.classList.replace('bg-white','bg-secundary');
+                }else{
+                    const tp = document.getElementById(`Tipo${x}`);
+                    tp.classList.replace('d-flex','d-none');
+                    const btntp = document.getElementById(`btnTipo${x}`);
+                    btntp.classList.replace('bg-secundary','bg-white');
+                } 
+            }
+        };
+    </script>
+</section> -->
+<section class="video-institutional py-5 bg-dark text-white">
+	<div class="container">
+		<div class="text-center mb-5">
+			<h2 class="display-4 mb-3">Video Institucional</h2>
+			<p class="lead">Conoce nuestra historia y lo que nos hace diferentes</p>
+		</div>
+
+		<!-- Video Container -->
+		<div  class="video-container ratio ratio-16x9 mb-5 shadow-lg rounded-3 overflow-hidden position-relative">
+			<video controls  poster="https://via.placeholder.com/1280x720" aria-label="Video institucional de nuestra empresa" id="video-institutional">
+				<source src="../Videos/326869_Transporting Asphalt Driving Semi Trailer_By_Brad_Day_Artlist_HD.mp4" type="video/mp4">
+			</video>
+            <div class="position-absolute h-100 w-100 d-flex justify-content-center align-items-center" id="Btn-play">
+                <button onclick="PlayVideo()"   class="p-4 rounded-circle  d-flex justify-content-center align-items-center border-0">
+                    <i class='bxr bx-play' id="Icon-Btn-play" style='color:black; font-size: 40px;'></i> 
+                </button>
+            </div>
+		</div>
+        <script>
+            let Isplaying;
+            
+            const PlayVideo = async () => {
+                    const video_institutional = document.getElementById('video-institutional');
+                    document.getElementById('Btn-play').classList.replace('d-flex','d-none');
+                        video_institutional.setAttribute('controls','true')
+                        await video_institutional.play();
+                        Isplaying = true;
+            };
+           
+        </script>
+
+		<!-- Stats Grid -->
+		<div class="stats-grid row text-center g-4">
+			<div class="col-6 col-md-3">
+				<div class="stat-item p-3  rounded">
+					<h3 class="text-white display-5 mb-2">+100</h3>
+					<p class="mb-0 small">Clientes satisfechos</p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="stat-item p-3  rounded">
+					<h3 class="text-white display-5 mb-2">+100</h3>
+					<p class="mb-0 small">Proyectos completados</p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="stat-item p-3  rounded">
+					<h3 class="text-white display-5 mb-2">+100</h3>
+					<p class="mb-0 small">Transportistas asociados</p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="stat-item p-3  rounded">
+					<h3 class="text-white display-5 mb-2">+100</h3>
+					<p class="mb-0 small">Empresas colaboradoras</p>
+				</div>
+			</div>
+		</div>
+        <div style="width: 80%;min-width: 300px"></div>
+
+		<!-- Optional CTA -->
+		<div class="text-center mt-5 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-around align-items-center gap-3">
+			<button class="btn btn-primary btn-lg px-4">Contáctanos</button>
+			<button class="btn btn-outline-light btn-lg px-4">Ver más videos</button>
+		</div>
+	</div>
+</section>
+
+</body>
+</html>
